@@ -1,0 +1,42 @@
+<html>
+	<head>
+<title> Ejercicio Autos </title>
+</head>
+<script src="autos.js"></script>
+<body>
+
+<p align="center"><font size="+3"><strong>Formulario de compras</strong></font> </p>
+                     
+ <!-- creo formulario -->                   
+<form name="form">
+  <table align="center" cellspacing="10" bordercolor="#000099" bgcolor="#FFCCCC">
+  <tr><td>
+    <h3>Seleccione Marcas</h3>
+    <h3>
+      <select id="marca" multiple>
+        <option id="VW" value="Volskwagen">Volskwagen</option>
+        <option id="CR" value="Crysler">Crysler</option>
+        <option id="FR" value="Ford">Ford</option>
+        <option id="FE" value="Ferrari">Ferrari</option>
+        <option id="SE" value="Seat">Seat</option>
+        </select>
+      </h3></td><td>
+        <h3>Forma de Pago</h3>
+  		<input type="radio" id="tarjeta" name="radio" value="tarjeta"> 
+        Tarjeta de Crédito <br>
+        <input type="radio" id="efectivo" name="radio" value="efectivo"> Contado Efectivo <br>
+        <input type="radio" id="cheque" name="radio" value="cheque"> Cheque <br>  <br>
+    </td></tr>
+  <tr><td>
+  <input type="checkbox" id="descuento" onClick="descuentoAutos()">Aplicar Descuento<br>
+  </td></tr>
+  <tr><td align="center">
+  <input type="submit" value="Enviar" onClick="imprimir()"></td><td align="center">
+  <input type="reset" value="Borrar" ></td>
+  </table>
+</form>
+
+</body>
+</html>
+
+
