@@ -1,3 +1,4 @@
+<b><h1>Trabajo práctico Nº7 </h1></b>
 1) Ingresados tres datos numéricos en las variables DD, MM y AA, respectivamente en donde: <br>
 DD= Día <br>
 MM= Mes <br>
