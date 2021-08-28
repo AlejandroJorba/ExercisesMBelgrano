@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Calculadora</title>
+</head>
+
+<body class="flex h-screen">
+    <div class="flex w-80 flex-col m-auto justify-center">
+    <h3 class="m-auto">Querés cambiar el color? Clickea abajo!</h3>
+    <input type="checkbox" class="m-2 m-auto" id="dark" onclick="dark()">
+        <p class="h-8 text-2xl border-b-4 border-red-900 mx-auto mb-8">Calculadora</p>
+        <p id="display2" class="d border-8 round border-black">0</p>
+        <p id="display" class="d border-8 round border-black">0</p>
+        <div id="divsito" class="grid grid-cols-4">
+            <input type="button" value="1" id="1" class="dark p-8 border-r-2 border-b-2 border-white bg-black text-white hover:bg-green-500">
+            <input type="button" value="2" id="2" class="dark p-8 border-r-2 border-b-2 border-white bg-black text-white hover:bg-green-500">
+            <input type="button" value="3" id="3" class="dark p-8 border-r-2 border-b-2 border-white bg-black text-white hover:bg-green-500">
+            <input type="button" value="/" id="/" class="dark p-8 border-b-2 border-white bg-black text-white hover:bg-green-500">
+            <input type="button" value="4" id="4" class="dark p-8 border-r-2 border-b-2 border-white bg-black text-white hover:bg-green-500">
+            <input type="button" value="5" id="5" class="dark p-8 border-r-2 border-b-2 border-white bg-black text-white hover:bg-green-500">
+            <input type="button" value="6" id="6" class="dark p-8 border-r-2 border-b-2 border-white bg-black text-white hover:bg-green-500">
+            <input type="button" value="*" id="*" class="dark p-8 border-b-2 border-white bg-black text-white hover:bg-green-500">
+            <input type="button" value="7" id="7" class="dark p-8 border-r-2 border-b-2 border-white bg-black text-white hover:bg-green-500">
+            <input type="button" value="8" id="8" class="dark p-8 border-r-2 border-b-2 border-white bg-black text-white hover:bg-green-500">
+            <input type="button" value="9" id="9" class="dark p-8 border-r-2 border-b-2 border-white bg-black text-white hover:bg-green-500">
+            <input type="button" value="+" id="+" class="dark p-8 border-b-2 border-white bg-black text-white hover:bg-green-500">
+            <input type="button" value="0" id="0" class="dark p-8 border-r-2 border-white bg-black text-white hover:bg-green-500">
+            <input type="button" value="=" id="=" class="dark p-8 border-r-2 border-white bg-black text-white hover:bg-green-500">
+            <input type="reset" value="C" id="clear" class="dark p-8 border-r-2 border-white bg-black text-white hover:bg-green-500">
+            <input type="button" value="-" id="-" class="dark p-8 bg-black text-white hover:bg-green-500">
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+    <style>
+        .body {
+            background-color: tomato;
+            color: black;
+            border-color: black;
+        }
+        .body:hover {
+            background-color: rgb(231, 61, 31);
+        }
+        .p{
+            border-color: tomato;
+        }
+    </style>
+</body>
+
+</html>
