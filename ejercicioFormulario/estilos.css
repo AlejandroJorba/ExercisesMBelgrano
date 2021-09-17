@@ -1,0 +1,10 @@
+.bg {
+    background-color: #001f3f;
+}
+/*El autocompletado es de color transparente*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: 5000s ease-in-out 0s;
+}
