@@ -1,3 +1,4 @@
+/* Obtención de elementos html */
 const h1Cancion = document.getElementById('cancion')
 const h1Autor = document.getElementById('autor')
 const btnPlay = document.getElementById('play')
@@ -5,6 +6,8 @@ const btnPause = document.getElementById('pause')
 const btnDetener = document.getElementById('detener')
 const audio = document.getElementById('audio')
 const gif = document.getElementById('gif')
+
+/* Creación de clase, constructor, atributos y métodos */
 class Cancion{
     constructor(nombre, autor, id){
         this.nombre = nombre;
@@ -40,12 +43,14 @@ class Cancion{
 
 }
 
+/* Instanciación de clase */
 const cancion1 = new Cancion('Yonaguni', 'Bad Bunny', 1);
+
+/* Asignación de autor y canción a los h del html */
 h1Cancion.textContent = cancion1.nombre
 h1Autor.textContent = cancion1.autor
-console.log(cancion1)
 
-
+/* Eventos */
 btnPlay.addEventListener('click', ()=> {
     cancion1.reproducir()
     if(cancion1.active(btnPause || btnDetener)){
@@ -57,6 +62,7 @@ btnPlay.addEventListener('click', ()=> {
         cancion1.inactive(btnPlay)
     })
 })
+
 btnPause.addEventListener('click', ()=> {
     cancion1.pausar()
     if(cancion1.active(btnPlay || btnDetener)){
@@ -65,14 +71,11 @@ btnPause.addEventListener('click', ()=> {
         cancion1.active(btnPause)
     }
 })
-btnDetener.addEventListener('click', ()=>{
-    if(cancion1.detener() == true){
-         if(cancion1.active(btnPause || btnPlay)){
-            cancion1.inactive(btnPlay)
-            cancion1.inactive(btnPause)
-            cancion1.active(btnDetener)
-        }
-    }
-    
 
+btnDetener.addEventListener('click', ()=>{
+    if(cancion1.detener() && cancion1.active(btnPause || btnPlay)){
+        cancion1.inactive(btnPlay)
+        cancion1.inactive(btnPause)
+        cancion1.active(btnDetener)
+    }
 })
